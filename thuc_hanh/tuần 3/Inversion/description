@@ -1,0 +1,40 @@
+Bài 3. Inversion – đảo ngược
+• Cho một dãy số nguyên a1, a2,…, an. Một cặp (ai, aj) được gọi là bị đảo ngược nếu i<j
+nhưng giá trị ai> aj
+• Hãy đếm số lượng các cặp bị đảo ngược trong dãy
+Input
+• Dòng 1: là giá trị của n (1 <= n <= 106
+)
+• Dòng 2: là các giá trị của a1, a2,…, an. ( 0 <= ai <= 106
+)
+ Output
+Số lượng cặp bị đảo Q module 109 + 7
+
+
+Gợi ý:
+• Số lượng cặp trong dãy n phần tử sẽ là n(n-1)/2
+• Duyệt và đếm số lượng cặp theo phương pháp tham lam thông thường: O(n2
+)
+• Thuật toán nhanh hơn?
+Ý tưởng chia để trị?
+• Chia dãy thành 2 nửa bằng nhau:
+o Số lượng đổi chỗ gồm: là tổng số đổi chỗ trong nửa trái L, và nửa phải R
+o Cộng với số lượng đổi chỗ của 1 phần tử thuộc nửa trái sang 1 phần tử nửa phải - M
+• Cách tìm số lượng đổi chỗ giữa 2 nửa M sao cho nhanh?
+o Nếu duyệt vét cạn vẫn là n/2 x n/2 = n2
+/4 → thuật toán vẫn là O(n2
+) như vét cạn
+o Không vét cạn?
+Giả sử dãy trái và phải đều có thứ tự tăng thì số lượng đổi chỗ giữa 1 phần tử nửa trái và 1 phần tử nửa
+phải sẽ tính là bao nhiêu
+VD. Nửa trái L = 1,5,10, 12 và nửa phải R= 3,11,17,21
+Hãy để ý tới giá trị chốt của mỗi nửa
+• Nửa trái: Chốt là phần tử cuối cùng
+• Nửa phải: Chốt là phần tử đầu tiên
+Với dãy trên thì rõ ràng 1 sẽ ko cần đổi chỗ, nhưng 5,10,12 sẽ là 3 lần đổi chỗ có thể với 3 bên nửa phải.
+12 sẽ có 1 lần đổi chỗ với 11 bên nửa phải
+Cách tính?
+• So sánh với phần tử cuối cùng của nửa trái hoặc đầu tiên nửa phải
+• Thời gian tìm: O(n)
+Vậy trong ý tưởng chia để trị ta kết hợp việc đếm với việc sắp xếp dãy như trong sắp xếp trộn – Merge
+Sort 
