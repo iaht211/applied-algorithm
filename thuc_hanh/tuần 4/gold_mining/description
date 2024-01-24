@@ -1,0 +1,22 @@
+Bài 1. Bài toán tìm cách bán hàng tối ưu
+Trên một trục đường thẳng có n cửa hàng tạp hóa liên tiếp nhau. Mỗi cửa hàng đều có nhu cầu làm đại
+lý cho sản phẩm mới ra mắt của công ty X. Nhu cầu của cửa hàng thứ i sẽ này được biểu diễn bởi 1 giá trị
+nguyên ai.
+Với mục đích phân phối sản phẩm rộng nhất, nên công ty đưa ra chính sách là hai đại lý bán sản phẩm
+này phải cách nhau ít nhất khoảng cách d, trong đó L1<=d<=L2.
+Hãy đưa ra tổng số lượng nhu cầu sản phẩm là lớn nhất với cách chọn đại lý sao KHÔNG vi phạm chính
+sách đại lý của công ty.
+
+Input
+6 2 3
+3 5 9 6 7 4
+Output
+19
+
+Dòng đầu tiên của file input gồm
+• N, L1, L2 lần lượt là số lượng cửa hàng liên tiếp nhau, L1 và L2 là 2 ngưỡng giới hạn trên và dưới
+của hai đại lý gần nhau
+• Dòng tiếp theo lần lượt là nhu cầu của các cửa hàng ai về sản phẩm mới
+Trong ví dụ trên thì 2 đại lý gần nhau nhất phải cách nhau 2-3 vị trí, vậy phương án tốt nhất sẽ là chọn
+cửa hàng 1, 3 và 5 với tổng nhu cầu sẽ là 3+9+7 = 19
+
